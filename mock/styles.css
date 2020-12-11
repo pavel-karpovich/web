@@ -1,0 +1,163 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 284px;
+  overflow: hidden;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+}
+
+.login-form {
+  width: 284px;
+  height: 600px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > div:first-child {
+  margin-bottom: 40px;
+}
+
+.auth {
+  width: 284px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  width: 284px;
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #8BBBE8;
+}
+
+.intr-list-container {
+  margin: 2px;
+  border: 1px solid #333;
+  width: 278px;
+  overflow: hidden;
+}
+
+.interaction-list-title {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 60px;
+}
+
+.interaction-list {
+  max-height: 240px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.interaction-item {
+  box-sizing: border-box;
+  width: 274px;
+  height: 32px;
+  margin: 2px;
+  background-color: #CAFFD1;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.interaction-item:hover {
+  background-color: #5DD1AB;
+}
+.selected-intr-item {
+  border: 2px solid #464AC2;
+  background-color: #5DD1AB;
+}
+
+.intr-item-left {
+  margin-right: 6px;
+  display: flex;
+  flex-flow: row;
+  flex-grow: 8;
+}
+.intr-item-left > span:first-child {
+  margin: 0 6px;
+}
+
+.intr-item-right {
+  flex-grow: 2;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.main-content-intr {
+  width: 284px;
+  height: 100%;
+  padding-top: 40px;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.main-content-intr.pending {
+  background-color: #efe1c0;
+}
+.main-content-intr.answered {
+  background-color: #f0fff0;
+}
+.main-content-intr.wrap-up {
+  background-color: #efefef;
+}
+
+.stop-call-button {
+  margin-top: 60px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  background-color: #E8370E;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+.stop-call-button:hover {
+  background-color: #EB0907;
+}
+
+.phone-number {
+  color: #2A4BEB;
+  font-size: 2rem;
+}
+.interlocutor-name {
+  margin-top: 6px;
+  color: #41874D;
+  font-size: 1.4rem;
+}
+.call-duration {
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+
+.call-review-field {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  margin: 8px 0;
+}
+
+.call-review-field + .call-review-field {
+  margin-top: 0;
+}

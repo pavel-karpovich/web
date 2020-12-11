@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Bright Pattern chat widget</title>
+</head>
+<body>
+    <h3>
+        This is the page with our Bright Pattern client chat widget!
+    </h3>
+    <a target="_blank" href="https://css-tricks.com/use-target_blank/">Open _blank page</a>
+    <script type="text/javascript">
+function popopen() {
+    window.open(
+        'https://stackoverflow.com/questions/726761/javascript-open-in-a-new-window-not-tab',
+        'random_name',
+        'height=720,width=1024,modal=yes,alwaysRaised=yes'
+    );
+}
+    </script>
+    <button name="open_new_window_btn" onclick="popopen();">Always open new window</button>
+    <!-- You have to put this piece of JavaScript code into your web page
+    Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
+    -->
+    <link type="text/css" rel="stylesheet" href="https://ocean08.brightpattern.com/clientweb/chat-client-v4/css/form.css">
+    <script type="text/javascript">
+        SERVICE_PATTERN_CHAT_CONFIG = {
+            appId: '3333eb6b01a34428bd7559d71b070002',
+            apiUrl: 'https://ocean08.brightpattern.com/clientweb/api/v1',
+            tenantUrl: 'pavelk.brightpattern.com',
+            chatPath: 'https://ocean08.brightpattern.com/clientweb/chat-client-v4/',
+            first_name: 'Bantan',
+            last_name: 'Pusan',
+            email: 'bantan_pusan222@zhoug.ch',
+            phone_number: '+86 (313) 728-98-00'
+        };
+    </script>
+    <script src="https://ocean08.brightpattern.com/clientweb/chat-client-v4/js/init.js"></script> 
+</body>
+</html>

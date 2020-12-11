@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Bright Pattern chat widget</title>
+</head>
+<body>
+    <h3>
+        Just a chat.
+    </h3>
+    <!-- You have to put this piece of JavaScript code into your web page
+        Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
+    -->
+    <link type="text/css" rel="stylesheet" href="https://surflychat.web.app/css/form.css">
+    <script type="text/javascript">
+        SERVICE_PATTERN_CHAT_CONFIG = {
+            appId: '9a57519f6bf14ac5b928f3718688f3be',
+            apiUrl: 'https://941baa476df0.ngrok.io/clientweb/api/v1',
+            tenantUrl: 'example.com',
+            chatPath: 'https://surflychat.web.app/',
+            first_name: 'Banrah',
+            last_name: 'Tortuk',
+            email: 'bantorh_eee777@gmail.com',
+            phone_number: '+1 209 305-13-06'
+        };
+    </script>
+    <script src="https://surflychat.web.app/js/init.js"></script>
+    <div class="sp-callback-form" id="sp-callback-form">
+        <label>Random text</label>
+        <textarea id="sp-callback-rnd_text" placeholder="null" ></textarea>
+        <label>Random phone</label>
+        <input type="tel" id="sp-callback-num" placeholder="Random phone" />
+        <button id="sp-chat-submit-inline">Chat</button>
+        <button id="sp-callback-submit-inline">Call</button>
+    </div>
+</body>
+</html>
