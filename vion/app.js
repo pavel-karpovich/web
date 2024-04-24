@@ -7,7 +7,7 @@
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.asserSNConfig = exports.assertObjectsExistenceData = exports.assertRecordInfoData = exports.assertKbArticleData = exports.assertKbSearchResultData = exports.assertKbFolderData = exports.assertUrlData = exports.assertClickToCallData = exports.assertOpenedContactData = exports.assertOpenedTaskData = exports.isSNContact = exports.isSNTask = void 0;
+exports.assertAgentStateSNPayload = exports.assertSNConfig = exports.assertObjectsExistenceData = exports.assertRecordInfoData = exports.assertKbArticleData = exports.assertKbSearchResultData = exports.assertKbFolderData = exports.assertUrlData = exports.assertClickToCallData = exports.assertOpenedContactData = exports.assertOpenedTaskData = exports.isSNContact = exports.isSNTask = void 0;
 function isSNTask(data) {
     return (isObject(data) &&
         'sysId' in data && typeof data.sysId === 'string' &&
@@ -131,14 +131,21 @@ function assertObjectsExistenceData(data) {
     throw Error("Data is not Objects Existence data: ".concat(JSON.stringify(data)));
 }
 exports.assertObjectsExistenceData = assertObjectsExistenceData;
-function asserSNConfig(data) {
+function assertSNConfig(data) {
     if (isObject(data) &&
         'allowEmptyRecordsList' in data && typeof data.allowEmptyRecordsList === 'boolean') {
         return;
     }
     throw Error("Data is not SN Config: ".concat(JSON.stringify(data)));
 }
-exports.asserSNConfig = asserSNConfig;
+exports.assertSNConfig = assertSNConfig;
+function assertAgentStateSNPayload(data) {
+    if (isObject(data) && 'state' in data && typeof data.state === 'string') {
+        return;
+    }
+    throw Error("Data is not Agent State payload: ".concat(JSON.stringify(data)));
+}
+exports.assertAgentStateSNPayload = assertAgentStateSNPayload;
 
 
 /***/ }),
@@ -210,6 +217,7 @@ var EVENTS_TO_SN_SCRIPT;
     EVENTS_TO_SN_SCRIPT["REQUEST_OBJECT"] = "sn_proxy_request_object";
     EVENTS_TO_SN_SCRIPT["CHECK_OBJECTS_EXISTENCE"] = "sn_proxy_check_objects_existence";
     EVENTS_TO_SN_SCRIPT["GET_CONFIG"] = "sn_proxy_get_config";
+    EVENTS_TO_SN_SCRIPT["AGENT_STATE_CHANGED"] = "sn_proxy_agent_state_changed";
 })(EVENTS_TO_SN_SCRIPT || (EVENTS_TO_SN_SCRIPT = {}));
 var EVENTS_FROM_SN_SCRIPT;
 (function (EVENTS_FROM_SN_SCRIPT) {
@@ -226,6 +234,7 @@ var EVENTS_FROM_SN_SCRIPT;
     EVENTS_FROM_SN_SCRIPT["REQUEST_OBJECT_RESULT"] = "sn_proxy_request_object_result";
     EVENTS_FROM_SN_SCRIPT["CHECK_OBJECTS_EXISTENCE_RESULT"] = "sn_proxy_check_objects_existence_result";
     EVENTS_FROM_SN_SCRIPT["GET_CONFIG_RESULT"] = "sn_proxy_get_config_result";
+    EVENTS_FROM_SN_SCRIPT["SET_AGENT_STATE"] = "sn_proxy_set_agent_state";
 })(EVENTS_FROM_SN_SCRIPT || (EVENTS_FROM_SN_SCRIPT = {}));
 var RECORDS_VALIDATION_ERRORS = {
     EMPTY_SELECTION: function () { return 'No records selected, please create a record for this interaction'; },
@@ -576,6 +585,15 @@ var registerServiceNowOpenFrameIntegration = function () {
             return [2 /*return*/, promise];
         });
     }); });
+    adApi.on('ON_AGENT_STATE_CHANGE', function (state, notReadyReason) {
+        toSNScript({
+            type: EVENTS_TO_SN_SCRIPT.AGENT_STATE_CHANGED,
+            data: {
+                state: state,
+                notReadyReason: notReadyReason,
+            },
+        });
+    });
     function handleOpenedObject(value) {
         logger.info('recordOnTheScreen = ', value);
         recordOnTheScreen = value;
@@ -738,12 +756,19 @@ var registerServiceNowOpenFrameIntegration = function () {
                 break;
             }
             case EVENTS_FROM_SN_SCRIPT.GET_CONFIG_RESULT: {
-                (0, guards_1.asserSNConfig)(data);
+                (0, guards_1.assertSNConfig)(data);
                 snConfig = data;
                 break;
             }
             case EVENTS_FROM_SN_SCRIPT.ACTIVATION: {
                 adApi.activatePage();
+                break;
+            }
+            case EVENTS_FROM_SN_SCRIPT.SET_AGENT_STATE: {
+                (0, guards_1.assertAgentStateSNPayload)(data);
+                adApi.setAgentState(data.state, data.notReadyReason)
+                    .then(function (result) { return console.log('@ agent state changed successfully:', JSON.stringify(result)); })
+                    .catch(function (error) { return console.log('@ agent state change failed:', JSON.stringify(error)); });
                 break;
             }
         }
