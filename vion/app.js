@@ -585,6 +585,21 @@ var registerServiceNowOpenFrameIntegration = function () {
             return [2 /*return*/, promise];
         });
     }); });
+    adApi.getAgentState().then(function (data) {
+        if (data.status === 'success') {
+            logger.info('Initial agent state:', data.data);
+            toSNScript({
+                type: EVENTS_TO_SN_SCRIPT.AGENT_STATE_CHANGED,
+                data: {
+                    state: data.data.state,
+                    notReadyReason: data.data.notReadyReason,
+                },
+            });
+        }
+        else {
+            logger.warn('Unable to get agent state:', data.error);
+        }
+    });
     adApi.on('ON_AGENT_STATE_CHANGE', function (state, notReadyReason) {
         toSNScript({
             type: EVENTS_TO_SN_SCRIPT.AGENT_STATE_CHANGED,
