@@ -1,0 +1,2 @@
+/*! For license information please see 87.4077acbf.chunk.js.LICENSE.txt */
+"use strict";(self.webpackChunk_bpinc_web_campaigns_ui=self.webpackChunk_bpinc_web_campaigns_ui||[]).push([[87],{9087:(a,e,i)=>{i.r(e),i.d(e,{CampaignsPage:()=>p.E});var p=i(7179)}}]);

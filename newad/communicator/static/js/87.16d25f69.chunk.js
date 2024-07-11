@@ -1,0 +1,2 @@
+/*! For license information please see 87.16d25f69.chunk.js.LICENSE.txt */
+"use strict";(self.webpackChunk_bpinc_web_communicator_ui=self.webpackChunk_bpinc_web_communicator_ui||[]).push([[87],{9087:(e,i,t)=>{t.r(i),t.d(i,{CommunicatorWidget:()=>c.uU,DispositionSelect:()=>c.Hq,ParallelChatInteraction:()=>c.OV,ResolutionNote:()=>c.VD});var c=t(8706)}}]);

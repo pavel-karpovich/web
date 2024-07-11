@@ -1,0 +1,11 @@
+/*! ./CommonOpenEventButton */
+
+/*! @bpinc/lib-communicator-navigation-state */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*!*************************************************************************************************************************!*\
+  !*** ../../packages/cal-modals-ui/src/components/CalendarEventNotificationModal/OpenEventButton/AdcOpenEventButton.tsx ***!
+  \*************************************************************************************************************************/

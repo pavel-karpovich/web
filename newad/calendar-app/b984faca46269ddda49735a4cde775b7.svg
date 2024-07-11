@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-_24x24_icon_pending);
+      }
+
+      .cls-2, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0;
+      }
+
+      .cls-3 {
+        fill: #fbbd08;
+      }
+    </style>
+    <clipPath id="clip-_24x24_icon_pending">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="_24x24_icon_pending" data-name="24x24 icon – pending" class="cls-1">
+    <rect class="cls-4" width="24" height="24"/>
+    <g id="Component_352_70" data-name="Component 352 – 70">
+      <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-2" width="24" height="24"/>
+      <path id="icons8-active-state_1_" data-name="icons8-active-state (1)" class="cls-3" d="M12,2A10,10,0,1,0,22,12,10.007,10.007,0,0,0,12,2Zm0,.87A9.13,9.13,0,1,1,2.87,12,9.124,9.124,0,0,1,12,2.87Z"/>
+    </g>
+  </g>
+</svg>

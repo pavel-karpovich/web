@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link href="/agent/evaluation-page/js/jquery/jquery-ui.css" rel="stylesheet">
+    <link href="/agent/evaluation-page/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/agent/evaluation-page/fonts/lato/variants.css" rel="stylesheet">
+    <link href="/agent/evaluation-page/css/common.css" rel="stylesheet">
+    <link href="/agent/evaluation-page/css/main.css" rel="stylesheet">
+</head>
+<body>
+<div id='container' style='width: 100%; height: 100%; border: 0;'>
+
+</div>
+
+<script src="/agent/evaluation-page/js/jquery/jquery.js"></script>
+<script src="/agent/evaluation-page/js/jquery/jquery-ui.js"></script>
+<script src="/agent/evaluation-page/js/jquery/jquery.translate.js"></script>
+<script src="/agent/evaluation-page/js/common.js"></script>
+<script src="/agent/evaluation-page/i18n/messages.js"></script>
+<!-- @todo: provide locale -->
+<script src="/agent/evaluation-page/i18n/en_US_messages.js"></script>
+<script src="/agent/evaluation-page/js/translator.js"></script>
+<script src="/agent/evaluation-page/js/tabs.js"></script>
+<script src="/agent/evaluation-page/js/viewer.js"></script>
+<script src="/agent/evaluation-page/js/moment/moment-with-locales.min.js"></script>
+<script src="/agent/evaluation-page/js/moment/moment-timezone-with-data.min.js"></script>
+<script>
+    var isEvaluationForm;
+    var externalInterface;
+    var timelineControl;
+    var initializer;
+
+    function init(data, evaluationForm, externalInterfaceObject, locale) {
+        isEvaluationForm = evaluationForm;
+        var $container = $('#container');
+        setMomentLocale(locale);
+        $container.load('/agent/evaluation-page/viewer-layout-template.html', function() {
+            externalInterface = externalInterfaceObject;
+            evaluationFormViewer.init(
+                VIEW_MODE,
+                function() {
+                    loadForm(data);
+                },
+                $container,
+            );
+        });
+    }
+
+    function loadForm(data) {
+        var layout = JSON.parse(data.layout);
+        var results = {
+            id: data.id,
+            formId: data.formId,
+            formName: data.formName,
+            permissions: data.evaluationPermissions,
+            form: layout.form,
+            linkedAreaList: data.linkedAreaList,
+            status: data.status
+        };
+        evaluationFormViewer.load(results, "form-style-default", function() {
+            if (isEvaluationForm) {
+                initEvaluationForm(data);
+            } else {
+                initAllEval(data);
+            }
+
+            evaluationFormViewer.postInit();
+        }, isEvaluationForm);
+    }
+
+    function initAllEval(data) {
+        var evalInfo = {
+            evaluatorName: data.evaluatorName,
+            evaluationTime: data.evaluationTime,
+            confirmedByName: data.confirmedByName,
+            confirmationTime: data.confirmationTime,
+            rejectionComment: data.agentComment,
+            status: data.status,
+            type: data.type
+        };
+
+        evaluationFormViewer.setReadOnly();
+        evaluationFormViewer.setupAllEvalInfo(evalInfo);
+        evaluationFormViewer.setupAllEvalButtons(data.evaluationPermissions);
+    }
+
+    function initEvaluationForm(data) {
+        // TODO: Check if it's visible at all
+        if (!data.evaluationPermissions.canMakeEvaluation) {
+            evaluationFormViewer.setReadOnly();
+        }
+        evaluationFormViewer.setupEvaluationFormInfo();
+        evaluationFormViewer.setupEvaluationFormButtons(data.evaluationPermissions);
+    }
+</script>
+</body>
+</html>

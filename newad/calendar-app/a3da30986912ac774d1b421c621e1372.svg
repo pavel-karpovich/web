@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-_24x24_icon_accepted);
+      }
+
+      .cls-2, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: 0;
+      }
+
+      .cls-3 {
+        fill: #4caf50;
+      }
+    </style>
+    <clipPath id="clip-_24x24_icon_accepted">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="_24x24_icon_accepted" data-name="24x24 icon – accepted" class="cls-1">
+    <rect class="cls-4" width="24" height="24"/>
+    <g id="Component_350_15" data-name="Component 350 – 15">
+      <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-2" width="24" height="24"/>
+      <path id="icons8-ok_2_" data-name="icons8-ok (2)" class="cls-3" d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2Zm4.707,6.331-5,7.375-3.912-3.63a.435.435,0,1,1,.591-.637l3.17,2.941,4.436-6.537a.435.435,0,1,1,.72.489Z"/>
+    </g>
+  </g>
+</svg>

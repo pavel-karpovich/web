@@ -1,0 +1,81 @@
+<div>
+	<div class="header">
+		<div class="row">
+			<ul class="nav nav-tabs home-tabs" role="tablist">
+				<li id="tab-home" class="nav-item">
+					<a class="nav-link active trn" data-toggle="tab" href="#panel-home" role="tab">evalHome</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="tab-content home-tabs-content">
+        <div class="tab-pane show active" id="panel-home" role="tabpanel">
+            <div class="app-box">
+				<div class="title trn">evalHome</div>
+                <div class="home-panels">
+					<div class="resizable">
+						<div class="panel left">
+							<div class="panel-content counts statistics-container">
+								<div class="loading" style="display: none"><div>Loading...</div></div>
+							</div>
+						</div>
+						<div class="panel center">
+							<div class="panel-content score-tiles-panel">
+							</div>
+							<div class="panel-content search-tree-panel">
+								<div class="row">
+									<div class="col-12">
+										<div class="subtitle trn">savedSearches</div>
+									</div>
+								</div>
+								<div class="scrollable">
+									<div id="search-tree">
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel right">
+							<div class="panel-content search-details-panel">
+								<div class="row">
+									<div class="col-12">
+										<div class="subtitle"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 tree-search-controls" style="display:none">
+										<img class="control-btn add-folder disabled trn" title="addFolder" src="/agent/evaluation-page/img/ico/ico-add-with-trn-grey.svg">
+										<img class="control-btn add-search disabled trn" title="addSearch" src="/agent/evaluation-page/img/ico/ico-add-grey.svg">
+										<img class="control-btn remove-btn disabled" src="/agent/evaluation-page/img/ico/ico-trash-grey.svg">
+									</div>
+								</div>
+								<div class="loading" style="display: none"><div>Loading...</div></div>
+								<div class="search-controls" style="display:none">
+									<div style="display: flex;flex-direction: column;">
+										<div class="search-conditions">
+										</div>
+										<div class="search-conditions-controls">
+											<div class="link-btn add-condition trn">addCondition</div>
+											<div class="link-btn add-condition-block trn">addBlock</div>
+										</div>
+										<div class="randomize-search-control">
+											<label>
+												<input class="randomize-search-check" type="checkbox"/>
+												<span class="form-check-label trn">randomizeSearch</span>
+											</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12 search-state-controls">
+											<button type="button" class="search-btn btn btn-sm btn-success trn">search</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

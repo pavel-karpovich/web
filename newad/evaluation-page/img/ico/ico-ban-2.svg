@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="ico-ban-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+	<path fill="#555" d="M69.152,166.373H22.976c-0.75,0-1.357-0.607-1.357-1.357V31.646c0-0.75,0.608-1.357,1.357-1.357h46.177
+		v2.715H24.333v130.655h44.819V166.373z"/>
+	<path fill="#555" d="M176.754,166.373h-46.045v-2.715h44.688V33.003h-44.688v-2.715h46.045c0.75,0,1.357,0.608,1.357,1.357
+		v133.37C178.111,165.766,177.504,166.373,176.754,166.373z"/>
+	<rect x="43.004" y="70.935" fill="#555" width="108.893" height="2.715"/>
+	<rect x="43.004" y="90.553" fill="#555" width="108.893" height="2.715"/>
+	<rect x="43.004" y="110.18" fill="#555" width="108.893" height="2.715"/>
+	<polygon id="rect1023-2-4-4-0" fill="#B80000" points="21.618,53.906 21.618,30.289 51.563,30.289 178.111,143.228 178.111,166.373
+		147.64,166.373 "/>
+</svg>

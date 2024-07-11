@@ -1,0 +1,12 @@
+#container .loading{width:24px;height:24px;margin-top:20px;background: url(../img/loading.gif) center center no-repeat;}
+#container .loading > div{margin-left:25px;line-height:24px}
+#container .loader{display:flex;}
+#container .loader .loader-bar{display:inline-block;position:relative;width:24px;height:24px;}
+#container .loader.with-progress .loader-bar{width:60px;height:60px;}
+#container .loader .loader-bar div{box-sizing:border-box;display:block;position:absolute;width:20px;height:20px;margin:2px;border:3px solid #fff;border-radius:50%;animation:loader-bar 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;border-color:#fff transparent transparent transparent;}
+#container .loader.with-progress .loader-bar div{width:50px;height:50px;margin:5px;border:6px solid #fff;border-color:#fff transparent transparent transparent;}
+#container .loader .loader-bar div:nth-child(1){animation-delay:-0.45s;}
+#container .loader .loader-bar div:nth-child(2){animation-delay:-0.3s;}
+#container .loader .loader-bar div:nth-child(3){animation-delay:-0.15s;}
+#container .loader .loader-progress{display:none;position:absolute;color:#ffffff;padding-top:2px;}
+@keyframes loader-bar{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}

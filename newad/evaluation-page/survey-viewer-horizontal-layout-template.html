@@ -1,0 +1,171 @@
+	<div class="container-fluid">
+		<div class="main-view-area viewier-area">
+			<div class="row">
+		    	<div id="layout" class="col-12">
+				    <div class="row">
+						<div class="col-12 layout-parent-box-wrapper" style="overflow-y: hidden;">
+                            <div id="layout-parent-box-viewer">
+                                <div class="row">                                
+                                    <div id="area-header-viewer" class="col-12" style="overflow-y: auto;"></div>
+                                </div>                                
+                                <div class="row"> 
+                                    <div id="area-content-viewer" class="col-12" style="z-index:1000; overflow-y: auto;"></div>
+                                </div>                                        
+                            </div>                            
+						</div>
+				    </div>
+		    	</div>
+			</div>		
+            <div class="row rightColCaption">
+                <div class="col-12 column-caption" style="text-align:center">                 
+                    <div style="display:inline-block; float: right;">
+                        <div class="input-group" id="submit-form-div">
+                            <button type="button" id="form-editor-button-submit" style="margin-left: 5px;" class="btn btn-sm btn-success trn" onclick="surveyFormViewer.saveForm();">submit</button>                                                                                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="templates" style="display:none;">
+
+                <!-- Form -->
+                <div id="form-viewer">                   
+                    <div class="edit-area-wrapper form-viewer-wrapper top-section">
+                        <div class="row full-line-box">
+                            <div class="col-2">
+                                <div class="image-line img-thumbnail" style="width: 150px;">
+                                    <div class="edit-area">
+                                        <img src="" id="form-image" alt="No image" class="img-fluid" style="overflow: hidden;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <div class="paragraph-value-line">
+                                    <div class="edit-area form-description-editor">
+                                        <span class="edit-point"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+                    <div class="row">
+                        <div class="col q-list area-list">                           
+                        </div>
+                    </div>
+                </div>
+               
+               <!-- Area List Item -->
+               <div id="area-list-item-template" class="q-list-item area-list-item">                
+                   <span class="area-list-item-title"></span>                   
+               </div>                                                            
+
+                <!-- Area -->
+                <div id="area-viewer" class="full-line-box question-body area-viewer">                    
+                    <div class="row layout-draw line-lvl-1">
+                        <div class="column-view-wrapper col-12">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="checkbox-control-template" class="draggable-control clearfix element-area">
+                    <div class="clearfix">
+                        <div class="left-column">                           
+                            <div class="element-label">                               
+                                <span class="is-not-edit checkbox-control-title-label"></span>
+                                <span class="control-required-label" style="color: red; font-size: 14px;">*</span>
+                            </div>
+
+                            <div class="element-child-item">
+                                <div class="is-not-edit">
+                                    <div class="is-not-edit">
+                                        <fieldset class="form-group checkbox-control-label">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+
+                <div id="radio-control-template" class="draggable-control clearfix element-area">
+                    <div class="clearfix">
+                        <div class="left-column">
+                            <div class="element-label">
+                                <span class="is-not-edit radio-control-title-label"></span>
+                                <span class="control-required-label" style="color: red; font-size: 14px;">*</span>
+                            </div>
+                            <div class="element-child-item">
+                                <div class="is-not-edit">
+                                    <div class="is-not-edit">
+                                        <div class="form-group radio-control-label"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
+                </div>
+
+                <div id="dropdown-control-template" class="draggable-control clearfix element-area">
+                    <div class="clearfix">
+                        <div class="left-column">
+                            <div class="element-label">
+                                <span class="is-not-edit dropdown-control-title-label"></span>
+                                <span class="control-required-label" style="color: red; font-size: 14px;">*</span>
+                            </div>
+                            <div class="element-child-item">
+                                <div class="is-not-edit">
+                                    <select class="dropdown-control-label form-control dropdown-control-label" style="width:auto;"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
+                </div>
+
+                <div id="slider-control-template" class="draggable-control clearfix element-area">
+                    <div class="clearfix">
+                        <div class="left-column">
+                            <div class="element-label">
+                                <span class="is-not-edit slider-control-title-label"></span>
+                                <span class="control-required-label" style="color: red; font-size: 14px;">*</span>
+                            </div>
+
+                            <div class="element-child-item">
+                                <div class="is-not-edit slider-box">
+                                    <div class="slider-control-label">
+                                        <div class="custom-handle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
+                </div>              
+
+                <div id="essay-control-template" class="draggable-control clearfix element-area">
+                    <div class="clearfix">
+                        <div class="left-column">
+                            <div class="element-label">
+                                <span class="is-not-edit essay-control-title-label"></span>
+                                <span class="control-required-label" style="color: red; font-size: 14px;">*</span>
+                            </div>
+                            <div class="element-child-item">
+                                <div class="is-not-edit">
+                                   <textarea class="form-control essay-control-label" style="margin-top: 10px;" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+                
+                <div id="static-text-control-template" class="draggable-control clearfix element-area">
+                    <div class="clearfix">
+                        <div class="left-column">
+                            <div class="element-label">
+                                <div class="is-not-edit static-text-control-title-label"></div>
+                            </div>                          
+                        </div>
+                    </div>                   
+                </div> 
+                               
+            </div>
+		</div>
+	</div>

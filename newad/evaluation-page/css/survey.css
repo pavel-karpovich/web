@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html {
+    font-size: 62.5%;
+}
+
+#surveyForm-layout,
+.tempButtons,
+.preview-loading {
+    font-family: "Noto Sans", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.u-fluid {
+    width: 100%;
+}
+
+#surveyForm-layout {
+    max-width: 67rem;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.viewier-area {
+    padding: 1.5rem 0 0;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.form-image {
+    width: 14rem;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    margin-bottom: 1rem;
+    color: #4B85A0;
+}
+
+.form-submitfield {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    margin-bottom: 1rem;
+    color: #4B85A0;
+}
+
+.form-elements {
+    position: relative;
+    padding: 0 4.5rem;
+    background-color: #fff;
+}
+
+.form-elements:nth-child(odd) {
+    background-color: #F9F9F9;
+}
+
+.element-label {
+    margin: 2rem 0;
+    font-weight: bold;
+}
+
+.form-element-title {
+    display: inline-block;
+}
+
+.form-check {
+    margin-bottom: 0;
+}
+
+.form-field:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.form-field:last-child {
+    margin-bottom: 2.5rem;
+}
+
+.form-field input {
+    vertical-align: middle;
+}
+
+.form-field label {
+    color: #818192;
+    padding-left: 0.8rem;
+    vertical-align: middle;
+}
+
+.form-submit {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.form-submit .btn {
+    font-size: 1.4rem;
+    font-weight: bold;
+    min-width: 20rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    line-height: 1.4rem;
+    cursor: pointer;
+    background: #21BA45;
+    border-color: #21BA45;
+}
+
+.form-submit .btn:hover {
+    background: #28a745;
+    border-color: #28a745;
+}
+
+.form-check-horizontal {
+    display: inline-flex;
+    margin-right: 2.4rem;
+}
+
+.form-checkbox-wrapper {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form-checkbox-wrapper input,
+.form-radio input {
+    position: absolute;
+    opacity: 0;
+}
+
+.form-checkbox-wrapper label,
+.form-radio label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+.form-checkbox-wrapper label:before,
+.form-radio label:before {
+    content: '';
+    margin-right: 0.8rem;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: white;
+    border: 1px solid #BDBDBD;
+}
+
+.form-radio label:before {
+    border-radius: 1rem;
+}
+
+.form-checkbox-wrapper input:hover + label:before,
+.form-radio input:hover + label:before {
+    background: #F9F9F9;
+}
+
+.form-checkbox-wrapper input:checked + label:before,
+.form-radio input:checked + label:before {
+    background: #F9F9F9;
+}
+
+.form-checkbox-wrapper input:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 9px;
+    background: #000;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 #000, 4px 0 0 #000, 4px -2px 0 #000, 4px -4px 0 #000, 4px -6px 0 #000, 4px -8px 0 #000;
+    transform: rotate(45deg);
+}
+
+.form-radio input:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 0.4rem;
+    top: 0.5rem;
+    background: #000;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 1rem;
+}
+
+.form-slider {
+    height: 0;
+    border-color: #BDBDBD;
+}
+
+.form-slider.ui-slider .ui-slider-handle {
+    top: -1.1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: #fff;
+    border-color: #bdbdbd;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px #0000001A;
+}
+
+.form-select {
+    cursor: pointer;
+    padding: 0.3rem;
+}
+
+.form-select,
+.form-textarea {
+    width: 100%;
+    border: 1px solid #BDBDBD;
+    border-radius: 0.4rem;
+}
+
+.form-textarea {
+    resize: none;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.form-textarea,
+.form-select,
+.form-textarea,
+.ui-slider-handle {
+    outline: none;
+}
+
+@media (max-width: 575px) {
+    .sfv .form-elements {
+        padding: 0 2rem;
+    }
+    .sfv .form-title {
+        line-height: 2.7rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .sfv .form-header {
+        margin-bottom: 0;
+    }
+
+    .sfv .form-image {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .form-image {
+        float: right;
+    }
+}
+
+@media ( max-width: 991px ) {
+    .sfv .form-field {
+        margin-bottom: 2.5rem !important;
+    }
+}
+
+@media (min-width: 576px ) and ( max-width: 991px ) {
+
+    .sfv .form-check-horizontal {
+        margin-right: 3.6rem;
+    }
+}

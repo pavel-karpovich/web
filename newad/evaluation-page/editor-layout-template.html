@@ -1,0 +1,517 @@
+
+	<div class="container-fluid app-efe">
+		<div class="main-site-area">
+			<div class="row">
+			    <div class="col-12 col-sm-2 actions-col palette-area">
+				    <div id="left-tabs-area" class="row actions-list">
+                        <div class="app-name"><span class="trn">evaluationFormEditor</span></div>
+                                           
+                        <div id="editor-clipboard" class="editor-clipboard"></div>
+                                             
+                        <div id="palette-wrapper" style="display:none;" class="palette-wrapper">
+                            <h4 class="area-title"><span class="trn">questions</span></h4>
+                            <div class="slide-box">
+                                <div id="draggable-checkbox-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-checkbox.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">checkboxElements</span>
+                                </div>
+
+                                <div id="draggable-radio-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-radio-button.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">radioButtons</span>
+                                </div>
+
+                                <div id="draggable-radio-horizontal-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-radio-button.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">horizontalRadioButtons</span>
+                                </div>
+
+                                <div id="draggable-dropdown-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-list.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">dropdownElement</span>
+                                </div>
+
+                                <div id="draggable-yes-no-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-radio-button.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">yesNo</span>
+                                </div>
+
+                                <div id="draggable-yes-no-na-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-radio-button.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">yesNoNa</span>
+                                </div>
+<!--
+                                <div id="draggable-slider-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-slider.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">slider</span>
+                                </div>
+
+                                <div id="draggable-numeric-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-numfield.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">numericBox</span>
+                                </div>
+
+                                <div id="draggable-essay-control" class="draggable-control col-12 action-item">
+                                    <div class="left-icons">
+                                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-notes-2.svg" alt=""/></span>
+                                    </div>
+                                    <span class="action-label trn">essayArea</span>
+                                </div>
+-->
+                            </div>
+                        </div>
+                        <div id="area-palette-wrapper" style="display:none;" class="palette-wrapper">
+                            <h4 class="area-title"><span class="trn">availableAreas</span></h4>
+                            <div class="slide-box"></div>
+                        </div>
+				    </div>
+		    	</div>
+		    	<div id="layout" class="col-12 layout-col">
+				    <div class="row">
+						<div class="col-12 layout-parent-box-wrapper">
+                            <div id="layout-parent-box" style="width:100%;">
+                                <div class="row">
+                                    <div id="content-header" class="col-12" style="overflow-y: auto;"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="content-body" class="col-12 column-wrapper column-wrapper-area" style="border-top: 2px solid lightgray; background:#fff; z-index:100; overflow-y: auto; display: flex;"></div>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="form-main-actions">
+                               <div class="score-box min-score-box"></div>
+                               <div class="score-box max-score-box"></div>
+                               <button type="button" class="" title="saveFormAs" id="form-editor-button-clone" onclick="evaluationFormEditor.cloneForm();"><img src="/agent/evaluation-page/img/ico/ico-clone-green.svg" alt="saveFormAs"/></button>
+                               <button type="button" class="" title="Save" id="form-editor-button-save" onclick="evaluationFormEditor.saveForm();"><img src="/agent/evaluation-page/img/ico/ico-apply-grey.svg" alt="Save" disabled="disabled"/></button>
+                               <button type="button" class="" title="Cancel" onclick="evaluationFormEditor.closeForm();"><img src="/agent/evaluation-page/img/ico/ico-cancel-red.svg" alt="Cancel"/></button>
+                               <button type="button" class="" title="Preview" id="form-editor-button-preview" onclick="evaluationFormEditor.previewForm();"><img src="/agent/evaluation-page/img/ico/ico-preview.svg" alt="Preview"/></button>
+                           </div>
+                           -->
+						</div>
+				    </div>
+		    	</div>
+			</div>
+
+            <div id="templates" style="display:none;">
+                <!-- Clipboard item template -->
+                <div id="editor-clipboard-item-template" class="draggable-control col-12 action-item" style="max-height: none">
+                    <div style="display: flex;align-items: center">
+                        <span style="margin-right: 10px;" class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-copy-white.svg" alt=""/></span>
+                        <span class="clipboard-item-label" style="display:inline-block; line-height: 20px;"></span> 
+                    </div>                                                               
+                </div>   
+            
+                <!-- Palette area -->
+                <div id="draggable-area-control" class="draggable-control col-12 action-item">
+                    <div class="left-icons">
+                        <span class="action-icon"><img src="/agent/evaluation-page/img/ico/ico-notes.svg" alt=""/></span>
+                    </div>
+                    <span class="action-label"></span>
+                </div>
+
+                <!-- Form editor -->
+                <div id="form-editor">
+                    <div class="edit-area-wrapper">
+                        <div class="row full-line-box">
+                            <!--
+                            <div class="col-2">
+                                <div class="image-line img-thumbnail">
+                                    <div class="edit-area">
+                                        <img src="/agent/evaluation-page/img/no-image.png" id="form-image" alt="No image" class="img-fluid" style="overflow: hidden;"/>
+                                        <input type="file" id="form-image-file-selector" style="display: none;"/>
+                                        <button id="form-image-upload-button" class="action-button action-edit" title="editImage"><img src="/agent/evaluation-page/img/ico/ico-edit.svg" alt="editImage"/></button>
+                                        <button id="form-image-delete-button" class="action-button action-edit" style="left: 30px;" title="deleteImage"><img src="/agent/evaluation-page/img/ico/ico-trash.svg" alt="deleteImage"/></button>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                            <div class="col-12" style="display: flex; align-items: center; justify-content: space-between;">
+                                <div class="caption-line">
+                                    <div class="edit-area form-title-editor">
+                                        <h3>
+                                            <span class="edit-point" style="font-size: 20px;"></span>
+                                            <span class="edit-point-changed" style="font-size: 20px;display:none">*</span>
+                                        </h3>
+                                        <button class="action-button action-edit form-title-edit" title="editTitle"><img src="/agent/evaluation-page/img/ico/ico-edit.svg" alt="editTitle"/></button>
+                                    </div>
+                                </div>
+                                <div class="form-main-actions" style="position: relative; top: 5px; right: 0; width: 490px;">
+                                    <div class="score-box min-score-box" style="white-space: nowrap;"></div>
+                                    <div class="score-box max-score-box" style="white-space: nowrap;"></div>
+                                    <button type="button" class="" title="saveFormAs" id="form-editor-button-clone" onclick="evaluationFormEditor.cloneForm();"><img src="/agent/evaluation-page/img/ico/ico-clone-green.svg" alt="saveFormAs"/></button>
+                                    <button type="button" class="" title="Save" id="form-editor-button-save" onclick="evaluationFormEditor.saveForm();"><img src="/agent/evaluation-page/img/ico/ico-apply-grey.svg" alt="Save" disabled="disabled"/></button>
+                                    <button type="button" class="" title="Cancel" onclick="evaluationFormEditor.closeForm();"><img src="/agent/evaluation-page/img/ico/ico-cancel-red.svg" alt="Cancel"/></button>
+                                    <button type="button" class="" title="Preview" id="form-editor-button-preview" onclick="evaluationFormEditor.previewForm();"><img src="/agent/evaluation-page/img/ico/ico-preview.svg" alt="Preview"/></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col q-list area-list area-header-list column-wrapper-area">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="draggable-control-with-options-template" class="draggable-control col-9 element-area">
+                    <div class="clearfix">
+                        <div class="left-column">
+                            <div class="element-label">
+                                <div class="is-not-edit">
+                                    <span class="control-list-item-number">1</span>.
+                                    <span class="control-title-label"></span>
+                                </div>
+                                <div class="element-actions is-not-edit">
+                                    <div class="group-actions group-edit group-edit-sec">
+                                        <div class="element-action element-action-fullcolor2 element-action-nohover element-action-fail question-fails-label" style="visibility:visible" title=""><img src="/agent/evaluation-page/img/ico/ico-ban-2.svg" alt=""/></div>
+                                        <div class="element-action element-action-fullcolor2 element-action-nohover element-action-fail question-bonus-label" style="visibility:visible" title=""><img src="/agent/evaluation-page/img/ico/ico-plus-minus.svg" alt=""/></div>
+                                        <div class="element-action element-action-edit" title="modify"><img src="/agent/evaluation-page/img/ico/ico-edit.svg" alt="modify"/></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="element-child-item">
+                                <div class="is-not-edit control-label">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-column right-column-prime">
+                            <div class="weight">
+                                <span><span class="control-percent-label">55</span>%</span>
+                            </div>
+                            <div class="element-actions is-not-edit">
+                                <div class="group-actions group-edit group-edit-prime">
+                                    <div class="element-action element-action-trash" title="delete"><img src="/agent/evaluation-page/img/ico/ico-trash.svg" alt="delete"/></div>
+                                    <div class="element-action element-action-copy" title="copy"><img src="/agent/evaluation-page/img/ico/ico-copy.svg" alt="copy"/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="area-header-list-item-template" class="q-mainlist-item area-list-item">
+                   <span class="area-list-item-number"></span>.
+                   <span class="area-list-item-title"></span>:
+                   <span><span class="area-list-item-percent">55</span>%</span>
+                   <div class="icons-group--left">
+                        <div class="element-action area-bonus-label" title=""><img src="/agent/evaluation-page/img/ico/ico-plus-minus-black.svg" alt=""/></div>
+                        <div class="element-action area-share-label" title=""><img src="/agent/evaluation-page/img/ico/ico-share-black.svg" alt=""/></div>
+                        <div class="element-action area-fails-label" title=""><img src="/agent/evaluation-page/img/ico/ico-ban-black.svg" alt=""/></div>
+                        <div class="element-action area-na-label" title=""><img src="/agent/evaluation-page/img/ico/ico-na-black.svg" alt=""/></div>
+                   </div>
+                   <div class="icons-group--right">
+                        <div class="icons-group--right-sub">
+                            <div class="element-action depth-area-up-button" title="decreaseIndent"><img src="/agent/evaluation-page/img/ico/ico-subarea2-black.svg" alt="decreaseIndent"/></div>
+                            <div class="element-action depth-area-down-button" title="increaseIndent"><img src="/agent/evaluation-page/img/ico/ico-subarea1-black.svg" alt="increaseIndent"/></div>
+                        </div>
+                        <div class="icons-group--right-sub">
+                            <div class="element-action add-new-area-button" title="new"><img src="/agent/evaluation-page/img/ico/ico-plus.svg" alt="new"/></div>
+                            <div class="element-action copy-area-button" title="copy"><img src="/agent/evaluation-page/img/ico/ico-copy.svg" alt="copy"/></div>
+                        </div>
+                        <div class="element-action remove-area-button" title="delete"><img src="/agent/evaluation-page/img/ico/ico-trash.svg" alt="delete"/></div>
+                   </div>                                 
+                </div>
+
+                <!-- Area editor -->
+                <div id="draggable-area-template" class="draggable-control draggable-area-control area-item-body col-12 element-area">
+                    <div class="clearfix group-body" style="height:100%;">
+                        <div class="left-column left-column-area">
+                            <div class="caption-line clearfix">
+                                <div class="edit-area area-title-editor">
+                                    <h3>
+                                        <span class="area-list-item-number" style="font-size: 20px; font-weight: 700">3</span>.
+                                        <span class="edit-point" style="font-size: 20px; font-weight: 700"></span>
+                                        <span style="font-size: 20px; font-weight: 700">-&#160;<span class="area-list-item-percent" style="font-size: 20px; font-weight: 700">55</span>%</span>
+                                    </h3>
+                                    <button class="action-button action-edit area-title-edit" title="editTitle"><img src="/agent/evaluation-page/img/ico/ico-edit.svg" alt="editTitle"/></button>
+                                </div>
+                                <div class="area-title-editor-lbl area-exclided-label">                                    
+                                </div>
+                            </div>
+                            <div class="element-child-item">
+                                <div class="row layout-draw line-lvl-1">
+                                    <div class="column-wrapper-questions col-12">
+                                        <div class="action-item-empty" style="margin-bottom: 10px;">
+                                            <span class="action-label-empty trn">dropControlsHere</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END Items templates -->
+
+                <!-- Edit Name Popup -->
+                <div id="edit-name-popup" class="modal-content">
+                    <h3 class="trn edit-name-title">saveFormAs</h3>
+                    <div class="row form-group">
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control name-popup-control"/>
+                        </div>
+                    </div>
+                    <div class="dialog-custom-footer">
+                        <button class="dialog-custom-btn name-save-popup-button" title="apply"><img src="/agent/evaluation-page/img/ico/ico-apply-green.svg" alt="apply"/></button>
+                        <button class="dialog-custom-btn name-cancel-popup-button" title="cancel"><img src="/agent/evaluation-page/img/ico/ico-cancel-red.svg" alt="cancel"/></button>
+                    </div>
+                </div>
+
+                <!-- Edit Form Popup -->
+                <div id="edit-form-popup" class="modal-content">
+                    <h3 class="trn">editFormProperties</h3>
+                    <div class="row form-group">
+                        <label class="col-5 col-form-label form-title" style="font-size:16px;line-height:1.5em;"></label>
+                        <label for="formMinScore" class="col col-form-label trn" style="font-size:16px;line-height:1.5em;">minScore</label>
+                        <div class="col">
+                            <input type="text" id="formMinScore" class="form-control text-right min-form-score" style="width:100%;" />
+                        </div>
+                        <label for="formScore" class="col col-form-label trn" style="font-size:16px;line-height:1.5em;">maxScore</label>
+                        <div class="col">
+                            <input type="text" id="formScore" class="form-control text-right form-score" style="width:100%;" />
+                        </div>
+                    </div>
+                    <div class="dialog-custom-footer">
+                        <button class="dialog-custom-btn form-save-popup-button" title="apply"><img src="/agent/evaluation-page/img/ico/ico-apply-green.svg" alt="apply"/></button>
+                        <button class="dialog-custom-btn form-cancel-popup-button" title="cancel"><img src="/agent/evaluation-page/img/ico/ico-cancel-red.svg" alt="cancel"/></button>
+                    </div>
+                </div>
+
+                <!-- Edit Area Popup -->
+                <div id="edit-area-popup" class="modal-content">
+                    <h3 class="trn">editAreaProperties</h3>
+                    <div class="row form-group">
+                        <div class="col-sm-9">
+                            <input type="text" maxlength="256" class="form-control area-input-title" />
+                        </div>
+                        <label for="areaWeight2" class="col col-form-label trn" style="font-size:16px;line-height:1.5em;">weight</label>
+                        <div class="col-sm-2">
+                            <input type="text" id="areaWeight2" class="form-control text-right area-weight" style="width:100%;" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col form-check">
+                            <input type="checkbox" class="area-checkbox area-fails-form" id="areaFail1"/>
+                            <label for="areaFail1" class="" style="font-size:14px;"><img class="trn" src="/agent/evaluation-page/img/ico/ico-ban.svg" style="top:-4px;" alt="areaFailureForm"/><span class="trn">areaFailureForm</span></label>
+                         </div>
+                    </div>                                       
+                    <div class="row form-group">
+                        <div class="col form-check">
+                            <input type="checkbox" class="area-checkbox area-share" id="areaShare1"/>
+                            <label for="areaShare1" class="" style="font-size:14px;"><img class="trn" src="/agent/evaluation-page/img/ico/ico-share.svg" style="top:-4px;" alt="areaShare"/><span class="trn">areaShare</span></label>
+                         </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col form-check">
+                            <input type="checkbox" class="area-checkbox area-na" id="areaNA1"/>
+                            <label for="areaNA1" class="" style="font-size:14px;"><img class="trn" src="/agent/evaluation-page/img/ico/ico-na.svg" style="top:-4px;" alt="areaNA"/><span class="trn">areaNA</span></label>
+                         </div>
+                    </div>
+                                       
+                    <p class="trn">areaExcludedLabel</p>
+
+                    <div class="click-line">
+                        <div class="click-line-label">                       
+                            <span class="trn excluded-label">none</span>
+                        </div>                       
+                        <div class="click-line-delete">
+                            <img src="/agent/evaluation-page/img/ico/ico-trash.svg" alt="delete" class="trn"/>
+                        </div>
+                    </div>
+
+                    <div class="excluded-content" style="display: none;">
+                        <div class="row form-group">
+                            <label for="excludedArea" class="col col-form-label trn" style="font-size:14px;line-height:20px;">area</label>
+                            <div class="col-sm-9">
+                                <select id="excludedArea" class="form-control excluded-area" style="width:100%;">                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="excludedQuestion" class="col col-form-label trn" style="font-size:14px;line-height:20px;">question</label>
+                            <div class="col-sm-9">
+                                <select id="excludedQuestion" class="form-control excluded-question" style="width:100%;">                                 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="excludedAnswer" class="col col-form-label trn" style="font-size:14px;line-height:20px;">option</label>
+                            <div class="col-sm-9">
+                                <select id="excludedAnswer" class="form-control excluded-answer" style="width:100%;">                                 
+                                </select>
+                            </div>
+                        </div>                        
+                        <div class="radio-control-label form-check-horizontal-fieldset">
+                            <div class="form-check-horizontal">
+                                <input name="excludedType" id="excludedTypeSelected" value="SELECTED" type="radio" />
+                                <label class="form-check-label trn" for="excludedTypeSelected">isSelected</label>
+                            </div>
+                            <div class="form-check-horizontal">
+                                <input name="excludedType" id="excludedTypeNonSelected" value="NON_SELECTED" type="radio" />
+                                <label class="form-check-label trn" for="excludedTypeNonSelected">isNotSelected</label>
+                            </div>
+                        </div>                                                               
+                    </div>
+                    <div class="dialog-custom-footer">
+                        <button class="dialog-custom-btn area-save-popup-button" title="Apply"><img src="/agent/evaluation-page/img/ico/ico-apply-green.svg" alt="apply"/></button>
+                        <button class="dialog-custom-btn area-cancel-popup-button" title="Cancel"><img src="/agent/evaluation-page/img/ico/ico-cancel-red.svg" alt="cancel"/></button>
+                    </div>
+                </div>
+
+                <!-- Question Editor Popup -->
+                <div id="edit-question" class="modal-content">
+                    <h3>Edit Question</h3>
+                    <div class="row form-group">
+                        <div class="col-sm-9">
+                            <input type="text" class="question-title form-control" />
+                        </div>
+                        <label for="areaWeight" class="col-sm-1 col-form-label trn" style="font-size:16px;line-height:1.5em;">weight</label>
+                            <div class="col">
+                            <input type="text" id="areaWeight" class="question-weight form-control text-right" value="33" style="width:100%;" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label style="color:#000;" class="trn">displayFormat</label>
+                            <div class="radio-control-label form-check-horizontal-fieldset">
+                                <div class="form-check-horizontal">
+                                    <input name="question-display-format" id="setCheckboxes" type="radio" value="CHECKBOX"/>
+                                    <label class="form-check-label trn" for="setCheckboxes">checkboxElements</label>
+                                </div>
+                                <div class="form-check-horizontal">
+                                    <input name="question-display-format" id="setRadio" type="radio" value="RADIO" />
+                                    <label class="form-check-label trn" for="setRadio">radioButtons</label>
+                                </div>
+                                <div class="form-check-horizontal">
+                                    <input name="question-display-format" id="setHRadio" type="radio" value="RADIO_HORIZONTAL" />
+                                    <label class="form-check-label trn" for="setHRadio">horizontalRadioButtons</label>
+                                </div>
+                                <div class="form-check-horizontal">
+                                    <input name="question-display-format" id="setSelect" type="radio" value="DROPDOWN" />
+                                    <label class="form-check-label trn" for="setSelect">dropdownElement</label>
+                                </div>
+                            </div>
+                            <hr />
+                            <label style="color:#000;">Options</label>
+                            <div class="table-scroller">
+                                <table class="table table-borderless options-table" style="width:auto;">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th class="trn">text</th>
+                                            <th class="trn">value</th>
+                                            <th class="trn">bonusPenalty</th>
+                                            <th class="trn">failsArea</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="selected">
+                                            <td class="col-dragable"></td>
+                                            <td>
+                                                <div class="col-text-wrapper col-text">
+                                                </div>
+                                            </td>
+                                            <td class="text-right col-value"></td>
+                                            <td class="text-right col-bonus"></td>
+                                            <td class="text-right col-fails"></td>
+                                            <td class="remove-btn-box"><button class="btn-icon answer-trash" title="Delete"><img src="/agent/evaluation-page/img/ico/ico-trash.svg" alt="Delete"/></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="clearfix add-row-button-box">
+                                <button class="btn-icon add-question"><img src="/agent/evaluation-page/img/ico/ico-plus.svg" class="trn" alt="addOption"/></button>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="textInput" class="col-1 col-form-label trn" style="font-size:16px;line-height:1.5em;">text</label>
+                        <div class="col-3">
+                            <input type="text" id="textInput" class="answer-text form-control" style="width:100%;" />
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-4">
+                            <div class="row form-group">                               
+                                <label for="bonusInput" class="col-7 col-form-label" style="font-size:16px;line-height:1.5em;"><img class="trn" src="/agent/evaluation-page/img/ico/ico-plus-minus.svg" alt="bonusPenalty"/><span class="trn">bonusPenalty</span></label>
+                                <div class="col-4">
+                                    <input type="text" id="bonusInput" class="answer-bonus form-control text-right" style="width:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="valueInput" class="col-1 col-form-label trn" style="font-size:16px;line-height:1.5em;">value</label>
+                        <div class="col-2">
+                            <input type="text" id="valueInput" class="answer-value form-control text-right" style="width:80px;" />
+                        </div>
+                        <div class="col-1">
+                            <div class="form-check-horizontal">
+                                <input class="answer-value-na" type="checkbox" id="naCheck" />
+                                <label class="form-check-label trn" for="naCheck">na</label>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                        <div class="col-4">
+                            <div class="row form-group">  
+                                <label for="failsCheck" class="col-7 col-form-label" style="font-size:16px;line-height:1.5em;"><img class="trn" src="/agent/evaluation-page/img/ico/ico-ban-2.svg" alt="failsArea"/><span class="trn">failsArea</span></label>
+                                <div class="col-4">
+                                    <div class="form-check-horizontal">
+                                        <input type="checkbox" id="failsCheck" class="answer-fails"/>
+                                        <label class="form-check-label" for="failsCheck">&#160;</label>
+                                    </div>
+                                </div>
+                           </div>                                   
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="dialog-custom-footer">
+                        <button class="dialog-custom-btn question-save"><img src="/agent/evaluation-page/img/ico/ico-apply-green.svg"/></button>
+                        <button class="dialog-custom-btn question-cancel"><img src="/agent/evaluation-page/img/ico/ico-cancel-red.svg"/></button>
+                    </div>
+                </div>
+
+                <div id="confirm-popup" class="modal-content">
+                    <h3 class="confirm-title"></h3>
+                    <h4 class="confirm-text"></h4>
+                    <div class="dialog-custom-footer">
+                        <button class="dialog-custom-btn confirm-yes-button" title="apply"><img src="/agent/evaluation-page/img/ico/ico-apply-green.svg" alt="yes"/></button>
+                        <button class="dialog-custom-btn confirm-cancel-button" title="cancel"><img src="/agent/evaluation-page/img/ico/ico-cancel-red.svg" alt="cancel"/></button>
+                    </div>
+                </div>
+
+                <div id="alert-popup" class="modal-content">
+                    <h3 class="alert-title"></h3>
+                    <h4 class="alert-text"></h4>
+                    <div class="dialog-custom-footer">
+                        <button class="dialog-custom-btn alert-yes-button" title="apply"><img src="/agent/evaluation-page/img/ico/ico-apply-green.svg" alt="yes"/></button>
+                    </div>
+                </div>
+
+                <div id="n-button-popup" class="modal-content">
+                    <h3 class="title"></h3>
+                    <h4 class="text"></h4>
+                    <div class="dialog-custom-footer">
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>

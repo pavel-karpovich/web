@@ -1,0 +1,2 @@
+/*! For license information please see 715.ff409058.chunk.js.LICENSE.txt */
+"use strict";(self.webpackChunk_bpinc_web_supervision_ui=self.webpackChunk_bpinc_web_supervision_ui||[]).push([[715],{9087:(i,e,s)=>{s.r(e),s.d(e,{AgentSupervisorControls:()=>r.fC,RightBar:()=>r.Ui,SupervisionPage:()=>r.PR});var r=s(3233)}}]);

@@ -1,0 +1,3 @@
+/*! For license information please see 85.aa78d4d2.chunk.js.LICENSE.txt */
+"use strict";(self.webpackChunk_bpinc_web_chat_center_ui=self.webpackChunk_bpinc_web_chat_center_ui||[]).push([[85],{7029:(e,r,t)=>{var c=t(7704);r.s=c.createRoot,c.hydrateRoot},1009:(e,r,t)=>{t.r(r);var c=t(2322),_=(t(6029),t(7029)),n=t(2850),s=t(7152);t(7445);(0,n.registerServiceWorker)(),(0,_.s)(document.getElementById("root")).render((0,c.jsx)(s.y6,{}))}}]);
+//# sourceMappingURL=85.aa78d4d2.chunk.js.map
