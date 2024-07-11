@@ -1,3 +1,0 @@
-/*! For license information please see 339.99b83beb.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_wallboard_ui=self.webpackChunk_bpinc_web_wallboard_ui||[]).push([[339],{7029:(e,r,a)=>{var o=a(7704);r.s=o.createRoot,o.hydrateRoot},1009:(e,r,a)=>{a.r(r);var o=a(2322),t=(a(6029),a(7029)),s=a(574),b=a(2850),l=a(4076);a(7445);(0,b.registerServiceWorker)(),(0,t.s)(document.getElementById("root")).render((0,o.jsx)(s.BrowserRouter,{basename:"/agent/wallboard",children:(0,o.jsx)(l.I,{})}))}}]);
-//# sourceMappingURL=339.99b83beb.chunk.js.map

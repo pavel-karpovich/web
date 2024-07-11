@@ -1,2 +1,0 @@
-/*! For license information please see 224.9bcc31bb.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_home_page_ui=self.webpackChunk_bpinc_web_home_page_ui||[]).push([[224],{9087:(e,_,p)=>{p.r(_),p.d(_,{HomePage:()=>a.U});var a=p(917)}}]);

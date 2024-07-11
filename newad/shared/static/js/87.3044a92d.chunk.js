@@ -1,2 +1,0 @@
-/*! For license information please see 87.3044a92d.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_shared_packages=self.webpackChunk_bpinc_web_shared_packages||[]).push([[87],{29087:(e,s,a)=>{a.r(s)}}]);

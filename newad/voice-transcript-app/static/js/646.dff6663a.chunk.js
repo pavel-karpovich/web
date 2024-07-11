@@ -1,2 +1,0 @@
-/*! For license information please see 646.dff6663a.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_voice_transcript_ui=self.webpackChunk_bpinc_web_voice_transcript_ui||[]).push([[646],{9087:(c,e,i)=>{i.r(e),i.d(e,{VoiceTranscriptPage:()=>_.z});var _=i(2499)}}]);

@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
-  <g id="forward_icon" data-name="forward icon" transform="translate(0.499 0.5)">
-    <circle id="Oval_2_Copy_8" data-name="Oval 2 Copy 8" cx="12" cy="12" r="12" transform="translate(0.001)" fill="rgba(255,255,255,0)" stroke="#fff" stroke-width="1"/>
-    <path id="icon" d="M2.538,16A.542.542,0,0,1,2,15.454c0-.875.261-8.425,9.154-8.718V4.545a.546.546,0,0,1,.332-.5.532.532,0,0,1,.587.118l3.769,3.818a.55.55,0,0,1,0,.771l-3.769,3.818a.533.533,0,0,1-.587.118.546.546,0,0,1-.332-.5V10.007c-3.3.093-5.724,1.049-7.045,2.781a4.862,4.862,0,0,0-1.032,2.666A.542.542,0,0,1,2.538,16Z" transform="translate(2.917 2)" fill="#fff"/>
-  </g>
-</svg>

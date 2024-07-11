@@ -1,2 +1,0 @@
-/*! For license information please see 88.1cfd3504.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_chat_center_ui=self.webpackChunk_bpinc_web_chat_center_ui||[]).push([[88],{9087:(e,t,n)=>{n.r(t),n.d(t,{ChatCenterInteraction:()=>r.Nf,ChatCenterPage:()=>r.bF,ChatMembersButtonProvider:()=>r.yj});var r=n(7152)}}]);

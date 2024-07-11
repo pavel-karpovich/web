@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
-  <g id="Button_Remove" data-name="Button Remove" transform="translate(-2.5 0.5)">
-    <rect id="BG" width="32" height="32" transform="translate(3)" fill="rgba(255,255,255,0)"/>
-    <g id="Button_-_Remove" data-name="Button - Remove" transform="translate(3)">
-      <circle id="Ellipse_250" data-name="Ellipse 250" cx="16" cy="16" r="16" fill="rgba(255,255,255,0)" stroke="#979797" stroke-width="1"/>
-      <path id="Add" d="M16.228,17.257l-5.143-5.143L5.943,17.257,4.915,16.228l5.143-5.143L4.915,5.943,5.943,4.915l5.143,5.143,5.143-5.143,1.029,1.029-5.143,5.143,5.143,5.143Z" transform="translate(4.915 4.915)" fill="#767676" stroke="rgba(0,0,0,0)" stroke-width="1"/>
-    </g>
-  </g>
-</svg>

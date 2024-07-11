@@ -1,2 +1,0 @@
-/*! For license information please see 35.88fcbfe8.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_wallboard_ui=self.webpackChunk_bpinc_web_wallboard_ui||[]).push([[35],{9087:(a,b,e)=>{e.r(b),e.d(b,{WallboardPage:()=>l.i});var l=e(4076)}}]);

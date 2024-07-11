@@ -1,3 +1,0 @@
-/*! For license information please see 9.0fd7665f.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_communicator_ui=self.webpackChunk_bpinc_web_communicator_ui||[]).push([[9],{7029:(e,r,t)=>{var c=t(7704);r.s=c.createRoot,c.hydrateRoot},1009:(e,r,t)=>{t.r(r);var c=t(2322),o=(t(6029),t(7029)),i=t(2850),n=t(8706);t(7445);(0,i.registerServiceWorker)(),(0,o.s)(document.getElementById("root")).render((0,c.jsx)(n.Lv,{}))}}]);
-//# sourceMappingURL=9.0fd7665f.chunk.js.map

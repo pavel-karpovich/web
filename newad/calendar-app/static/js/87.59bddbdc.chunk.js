@@ -1,2 +1,0 @@
-/*! For license information please see 87.59bddbdc.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_calendar_ui=self.webpackChunk_bpinc_web_calendar_ui||[]).push([[87],{9087:(e,a,n)=>{n.r(a),n.d(a,{CalendarBody:()=>l.Rb,CalendarEventForm:()=>l.Z$,CalendarModalsAutoOpener:()=>l.Xd,CalendarNavigation:()=>l.ih,CalendarPage:()=>l.V3,CalendarUserSelect:()=>l.Qb,CalendarViewSelect:()=>l.fM,CalendarViewTitle:()=>l.n8});var l=n(4293)}}]);

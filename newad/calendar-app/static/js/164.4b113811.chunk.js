@@ -1,3 +1,0 @@
-/*! For license information please see 164.4b113811.chunk.js.LICENSE.txt */
-"use strict";(self.webpackChunk_bpinc_web_calendar_ui=self.webpackChunk_bpinc_web_calendar_ui||[]).push([[164],{5164:(e,n,a)=>{a.r(n),a.d(n,{AdOpenEventButton:()=>o});var t=a(2322),c=a(6029),u=a(8445),i=a(3393),l=a(7649),o=function(e){var n=e.eventId,a=e.onClick,o=(0,u.useNavigationState)("goTo"),r=(0,i.Xg)(),s=(0,c.useCallback)((function(){n&&(o(u.AppRoutes.calendar),r({id:n})),a()}),[n,o,a,r]);return(0,t.jsx)(l.t,{onClick:s})}}}]);
-//# sourceMappingURL=164.4b113811.chunk.js.map

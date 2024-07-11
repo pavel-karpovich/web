@@ -1,4 +1,0 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.33333 2V14M3.33333 2H12.6667C13.4033 2 14 2.59667 14 3.33333V12.6667C14 13.4033 13.4033 14 12.6667 14H3.33333C2.59667 14 2 13.4033 2 12.6667V3.33333C2 2.59667 2.59667 2 3.33333 2Z" stroke="var(--tw-svg-color, #0D363F)" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="2" y="2" width="4" height="12" rx="0.666667" fill="var(--tw-svg-color, #0D363F)"/>
-</svg>
